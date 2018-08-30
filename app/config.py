@@ -1,0 +1,1 @@
+headlines_url = 'https://newsapi.org/v2/top-headlines?country={}&apiKey={}'
