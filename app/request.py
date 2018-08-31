@@ -44,3 +44,22 @@ def process_sources(sources):
 
     return source_list
 
+
+def get_articles(id):
+    print('full_headlines_url')
+    full_headlines_url = headline_base_url.format(id,api_key)
+  
+    with urllib.request.urlopen(full_headlines_url) as url:
+        articles = url.read()
+        json_articles = json.loads(articles)
+        print(json_articles)
+
+        articles_list = None
+
+        if json_articles['articles']:
+            article_lib = json_articles['articles']
+            articles_list = process_articles(article_lib)
+
+    return articles_list
+
+
