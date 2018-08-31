@@ -63,3 +63,20 @@ def get_articles(id):
     return articles_list
 
 
+def process_articles(articles):
+    articles_list = []
+    for article in articles:
+        author = article.get('author')
+        title = article.get('title')
+        description = article.get('description')
+        url = article.get('url')
+        urlToImage = article.get('urlToImage')
+        publishedAt = article.get('publishedAt')
+
+        article_data = Headlines(
+            author, title, description, url, urlToImage, publishedAt)
+
+        articles_list.append(article_data)
+
+    return articles_list
+

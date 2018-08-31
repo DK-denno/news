@@ -1,18 +1,8 @@
-<html>
-    <head>       
-        
-    </head>
+{% import 'macros.html' as macro %}
     <body>
-        <h1>NEWS</h1>
-     
-            
-            <h3> New sources</h3>
-             <ul>
-                {% for source in display %}
-                    <li>{{source.name}}</li>:{{source.url}}}
-                {% endfor %}
-            </ul>
-  
-        
-    </body>
-</html>
+        {% macro.displaySources(name) %}
+
+
+
+    </body> 
+{% endmacro %}
