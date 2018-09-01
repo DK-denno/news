@@ -5,43 +5,57 @@
     {% block styles%} {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
     <div class='row'>
-        <div class='head'><h1>GENERAL</h1></div>
+        <div class='head'>
+            <h1>GENERAL</h1>
+        </div>
         <ul>
             {{macro.displaySources(general)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>SPORTS</h1></div>
+        <div class='head'>
+            <h1>SPORTS</h1>
+        </div>
         <ul>
             {{macro.displaySources(sports)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>BUSINESS</h1></div>
+        <div class='head'>
+            <h1>BUSINESS</h1>
+        </div>
         <ul>
             {{macro.displaySources(business)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>TECHNOLOGY</h1></div>
+        <div class='head'>
+            <h1>TECHNOLOGY</h1>
+        </div>
         <ul>
             {{macro.displaySources(technology)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>ENTERTAINMENT</h1></div>
+        <div class='head'>
+            <h1>ENTERTAINMENT</h1>
+        </div>
         <ul>
             {{macro.displaySources(entertainment)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>SCIENCE</h1></div>
+        <div class='head'>
+            <h1>SCIENCE</h1>
+        </div>
         <ul>
             {{macro.displaySources(science)}}
         </ul>
     </div>
     <div class='row'>
-        <div class='head'><h1>HEALTH</h1></div>
+        <div class='head'>
+            <h1>HEALTH</h1>
+        </div>
         <ul>
             {{macro.displaySources(health)}}
         </ul>
@@ -52,16 +66,10 @@
 
 <Style>
     .head {
-        margin-left: 400px;
+        margin-left: 500px;
     }
 
-    a {
-        padding: 50px;
-        
-    }
-
-    a.hover {
-
-        padding: 80px;
+    body {
+        background-color: bisque;
     }
 </Style>
