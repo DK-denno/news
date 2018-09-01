@@ -1,17 +1,27 @@
-from app import app
+
 import urllib.request
 import json
 from .config import Config
 # from config import
-from models import source, headlines
+from .models import Source, Headlines
 
-Sources = source.Sources
-Headlines = headlines.Headlines
+
+
+base_url = None
+api_key = None 
+headline_base_url = None
+
+
+def configue_request(app):
+    global api_key,base_url,headline_base_url
 
 base_url = app.config['SOURCES_URL']
-api_key = app.config['API_KEY']
+api_key = 
+app.config['API_KEY']
 
-headline_base_url = app.config['HEADLINES_URL']
+headline_base_url = 
+app.config['HEADLINES_URL']
+
 
 
 def get_sources(category):

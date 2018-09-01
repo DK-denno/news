@@ -14,5 +14,8 @@ def create_app(config_name):
 
     #the init app method is called on a function to complete their initialisation
 
+    #registering the blueprint created in app/__init__.py
+    from .main import main_blueprint
+    app.register_blueprint(main_blueprint)
     return app
      
