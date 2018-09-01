@@ -14,14 +14,17 @@
 
                 <div class="col-sm-4">
                     <div class='card'>
-                        <div class="card-header">{{article.title}}</div>
+                        <div class="card-header"><b>{{article.title}}</b></div>
                         <div class='card-body'>
-                            <img src="{{article.urlToImage}}" alt="" width='300' height='200'> {{article.description}}
+                            <img src="{{article.urlToImage}}" alt="" width='300' height='200'><br>
+                             {{article.description}}<br>
 
+                            <div class='card-footer'>
                             <br> published by:{{article.author}}
                             <br> published at: {{article.publishedAt}}
                             <br>
-
+                            <a href="{{article.url}}">FULL STORY</a>
+                            </div>
                         </div>
                     </div>
                     <br>
