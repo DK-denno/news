@@ -2,34 +2,50 @@
 
 
 <body>
-
-    {% block content %} sports
-    <ul>
-        {{macro.displaySources(sports)}}
-    </ul>
-    business
-    <ul>
-        {{macro.displaySources(business)}}
-    </ul>
-    technology
-    <ul>
-        {{macro.displaySources(technology)}}
-    </ul>
-    entertainment
-    <ul>
-        {{macro.displaySources(entertainment)}}
-    </ul>
-    science
-    <ul>
-        {{macro.displaySources(science)}}
-    </ul>
-    health
-    <ul>
-        {{macro.displaySources(health)}}
-    </ul>
-    general
-    <ul>
-        {{macro.displaySources(general)}}
-    </ul>
+    {% block styles%} {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>GENERAL</h1></span>
+        <ul>
+            {{macro.displaySources(general)}}
+        </ul>
+    </div>
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>SPORTS</h1></span>
+        <ul>
+            {{macro.displaySources(sports)}}
+        </ul>
+    </div>
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>BUSINESS</h1></span>
+        <ul>
+            {{macro.displaySources(business)}}
+        </ul>
+    </div>
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>TECHNOLOGY</h1></span>
+        <ul>
+            {{macro.displaySources(technology)}}
+        </ul>
+    </div>
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>ENTERTAINMENT</h1></span>
+        <ul>
+            {{macro.displaySources(entertainment)}}
+        </ul>
+    </div>
+    <div class='row' >
+        <span class='head'style='margin-left: 400px;' ><h1>SCIENCE</h1></span>
+        <ul>
+            {{macro.displaySources(science)}}
+        </ul>
+    </div>
+    <div class='row'>
+            <span class='head'style='margin-left: 400px;' ><h1>HEALTH</h1></span>
+        <ul>
+            {{macro.displaySources(health)}}
+        </ul>
+    </div>
+    
     {% endblock %}
 </body>

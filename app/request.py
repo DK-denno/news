@@ -15,6 +15,9 @@ headline_base_url = app.config['HEADLINES_URL']
 
 
 def get_sources(category):
+    '''
+    a ffunction that returns sources with category passed in as a parameter
+    '''
     full_url = base_url.format(category,api_key)
     with urllib.request.urlopen(full_url) as url:
         source_data = url.read()
@@ -31,6 +34,9 @@ def get_sources(category):
 
 
 def process_sources(sources):
+    '''
+    an 'interface' that filters data and inserts it into a class
+    '''
     source_list = []
     for one_source in sources:
         id = one_source.get('id')
@@ -46,6 +52,9 @@ def process_sources(sources):
 
 
 def get_articles(id):
+    '''
+    a function that returns article_list irrespective of their category
+    '''
     print('full_headlines_url')
     full_headlines_url = headline_base_url.format(id, api_key)
 

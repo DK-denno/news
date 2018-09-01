@@ -2,15 +2,50 @@
 
 <body>
     {% block content %}
-    <h1>NEWS</h1>
+    <div class="container">
+        <h1>NEWS</h1>
 
 
-    <h3> New sources</h3>
-    <ul>
-        {% for article in articles %}
-        <li>{{article.author}}</li>:
-        <img src="{{article.urlToImage}}" alt=""> {% endfor %}
-    </ul>
+        <h3> TOP HEADLINES</h3>
 
-    {% endblock %}
+        <div class='container-fluid'>
+            <div class='row'>
+                {% for article in articles %}<br>
+
+                <div class="col-sm-4">
+                    <div class='card'>
+                        <div class="card-header">{{article.title}}</div>
+                        <div class='card-body'>
+                            <img src="{{article.urlToImage}}" alt="" width='300' height='200'> {{article.description}}
+
+                            <br> published by:{{article.author}}
+                            <br> published at: {{article.publishedAt}}
+                            <br>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+
+
+
+
+                {% endfor %}
+            </div>
+        </div>
+
+        {% endblock %}
+    </div>
 </body>
+<style>
+card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+</style>
