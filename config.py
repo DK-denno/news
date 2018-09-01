@@ -12,6 +12,9 @@ class Config:
 
 
 class DevConfig(Config):
+     '''
+    these function pass in the Config class as a parameter
+    '''
    
     pass
 
