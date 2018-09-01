@@ -3,7 +3,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> NEWS </title>
+        {%if title%}
+            <title>{title</title>
+        {% else %}
+           <title> NEWS </title>
+        {% endif %}
     </head>
     <body>
         <!-- Content block -->

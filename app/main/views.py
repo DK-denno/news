@@ -6,6 +6,7 @@ from ..request import get_sources, get_articles
 @main.route('/')
 def index():
 
+    title = 'News-where truth gets nakedly revealed'
     sports = get_sources('sports')
     business = get_sources('business')
     entertainment = get_sources('entertainment')
@@ -28,5 +29,5 @@ def index():
 def articles(id):
 
     articles_display = get_articles(id)
-
+    title=f'{id}'
     return render_template('news.html',articles=articles_display,)
