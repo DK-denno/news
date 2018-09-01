@@ -1,20 +1,16 @@
-<html>
-    <head>       
-        
-    </head>
-    <body>
-        <h1>NEWS</h1>
-     
-            
-            <h3> New sources</h3>
-             <ul>
-                {% for article in articles %}
-                    <li>{{article.author}}</li>:
-                    <img src="{{article.urlToImage}}" alt="">
-                    
-                {% endfor %}
-            </ul>
-  
-        
-    </body>
-</html>
+{% extends 'base.html' %}
+
+<body>
+    {% block content %}
+    <h1>NEWS</h1>
+
+
+    <h3> New sources</h3>
+    <ul>
+        {% for article in articles %}
+        <li>{{article.author}}</li>:
+        <img src="{{article.urlToImage}}" alt=""> {% endfor %}
+    </ul>
+
+    {% endblock %}
+</body>

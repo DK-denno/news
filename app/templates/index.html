@@ -1,13 +1,15 @@
-{% import 'macros.html' as macro %}
+{% extends 'base.html' %} {% import 'macros.html' as macro %}
+
 
 <body>
-    sports
+
+    {% block content %} sports
     <ul>
         {{macro.displaySources(sports)}}
     </ul>
     business
     <ul>
-            {{macro.displaySources(business)}}
+        {{macro.displaySources(business)}}
     </ul>
     technology
     <ul>
@@ -15,19 +17,19 @@
     </ul>
     entertainment
     <ul>
-            {{macro.displaySources(entertainment)}}
-        </ul>
-        science
+        {{macro.displaySources(entertainment)}}
+    </ul>
+    science
     <ul>
-            {{macro.displaySources(science)}}
-        </ul>
-        health
+        {{macro.displaySources(science)}}
+    </ul>
+    health
     <ul>
-            {{macro.displaySources(health)}}
-        </ul>
-        general
+        {{macro.displaySources(health)}}
+    </ul>
+    general
     <ul>
-            {{macro.displaySources(general)}}
-        </ul>
-     
+        {{macro.displaySources(general)}}
+    </ul>
+    {% endblock %}
 </body>
