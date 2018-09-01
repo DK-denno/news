@@ -20,7 +20,9 @@ class DevConfig(Config):
 
 
 class ProdConfig(Config):
-     
+     '''
+    these function pass in the Config class as a parameter
+    '''
     pass
 
 config_options = {
