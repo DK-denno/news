@@ -17,6 +17,9 @@ class source_test(unittest.TestCase):
         self.assertTrue(isinstance(self.new_source, Sources))
 
     def test_data(self):
+        '''
+        this function asserts whether the value entered by the setUp method will apper if the property is called
+        '''
         self.assertEqual(self.new_source.id, 'ABC-news')
         self.assertEqual(self.new_source.name, 'ABC-news')
         self.assertEqual(self.new_source.url, 'https://abc.com')
