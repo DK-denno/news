@@ -86,6 +86,9 @@ def get_articles(id):
 
 
 def process_articles(articles):
+    '''
+    this function acr=ts an an interfacce for data brought back by the api url as it pushes relevant data into our class and irrellevant data is left out
+    '''
     articles_list = []
     for article in articles:
         author = article.get('author')
