@@ -15,6 +15,9 @@ headline_base_url = None
 
 
 def configue_request(app):
+    '''this function imports the urls and api key and makes their placeeholders global
+    variables which means they can be acccessed anywhere o this page.
+    '''
     global api_key,base_url,headline_base_url
 
     base_url = app.config['SOURCES_URL']
