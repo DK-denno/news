@@ -28,5 +28,5 @@ def index():
 def articles(id):
 
     articles_display = get_articles(id)
-    title = f'{articles.title}'
+    title = f'{articles_display.title}'
     return render_template('news.html', title=title,articles=articles_display,)
