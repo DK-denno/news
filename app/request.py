@@ -1,9 +1,11 @@
-
+from . import main
 import urllib.request
 import json
-from .config import Config
+from config import Config
 # from config import
-from .models import Source, Headlines
+from .models import Sources, Headlines
+
+
 
 
 
@@ -15,12 +17,10 @@ headline_base_url = None
 def configue_request(app):
     global api_key,base_url,headline_base_url
 
-base_url = app.config['SOURCES_URL']
-api_key = 
-app.config['API_KEY']
+    base_url = app.config['SOURCES_URL']
+    api_key=app.config['API_KEY']
 
-headline_base_url = 
-app.config['HEADLINES_URL']
+    headline_base_url=app.config['HEADLINES_URL']
 
 
 

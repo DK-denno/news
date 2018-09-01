@@ -19,6 +19,6 @@ class ProdConfig(Config):
     pass
 
 config_options = {
-    'development':DevConfig
+    'development':DevConfig,
     'production':ProdConfig
 }
