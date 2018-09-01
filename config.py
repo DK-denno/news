@@ -12,13 +12,20 @@ class Config:
 
 
 class DevConfig(Config):
+    '''
+    these function pass in the Config class as a parameter
+    '''
+   
     pass
 
 
 class ProdConfig(Config):
+    '''
+    these function pass in the Config class as a parameter
+    '''
     pass
 
 config_options = {
-    'development':DevConfig
+    'development':DevConfig,
     'production':ProdConfig
 }

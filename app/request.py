@@ -1,9 +1,11 @@
-
+from . import main
 import urllib.request
 import json
-from .config import Config
+from config import Config
 # from config import
-from .models import Source, Headlines
+from .models import Sources, Headlines
+
+
 
 
 
@@ -13,14 +15,15 @@ headline_base_url = None
 
 
 def configue_request(app):
+    '''this function imports the urls and api key and makes their placeeholders global
+    variables which means they can be acccessed anywhere o this page.
+    '''
     global api_key,base_url,headline_base_url
 
-base_url = app.config['SOURCES_URL']
-api_key = 
-app.config['API_KEY']
+    base_url = app.config['SOURCES_URL']
+    api_key=app.config['API_KEY']
 
-headline_base_url = 
-app.config['HEADLINES_URL']
+    headline_base_url=app.config['HEADLINES_URL']
 
 
 
@@ -83,6 +86,9 @@ def get_articles(id):
 
 
 def process_articles(articles):
+    '''
+    this function acr=ts an an interfacce for data brought back by the api url as it pushes relevant data into our class and irrellevant data is left out
+    '''
     articles_list = []
     for article in articles:
         author = article.get('author')

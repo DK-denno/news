@@ -3,7 +3,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> Welcome to the best Movie Review website </title>
+        {%if title%}
+            <title>{title</title>
+        {% else %}
+           <title> NEWS </title>
+        {% endif %}
     </head>
     <body>
         <!-- Content block -->
