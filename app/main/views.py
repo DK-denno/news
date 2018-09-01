@@ -28,5 +28,5 @@ def index():
 def articles(id):
 
     articles_display = get_articles(id)
-   
+    title = f'{articles.ti}'
     return render_template('news.html', articles=articles_display,)
