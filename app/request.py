@@ -26,7 +26,7 @@ app.config['HEADLINES_URL']
 
 def get_sources(category):
     '''
-    a ffunction that returns sources with category passed in as a parameter
+    a function that returns sources with category passed in as a parameter
     '''
     full_url = base_url.format(category,api_key)
     with urllib.request.urlopen(full_url) as url:

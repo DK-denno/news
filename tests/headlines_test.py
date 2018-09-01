@@ -1,5 +1,5 @@
 import unittest
-from headlines import Headlines
+from app.models import Headlines
 
 class headlines_test(unittest.TestCase):
     def setUp(self):
