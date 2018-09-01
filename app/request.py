@@ -14,8 +14,8 @@ api_key = app.config['API_KEY']
 headline_base_url = app.config['HEADLINES_URL']
 
 
-def get_sources():
-    full_url = base_url.format(api_key)
+def get_sources(category):
+    full_url = base_url.format(category,api_key)
     with urllib.request.urlopen(full_url) as url:
         source_data = url.read()
         json_source_data = json.loads(source_data)
@@ -47,8 +47,8 @@ def process_sources(sources):
 
 def get_articles(id):
     print('full_headlines_url')
-    full_headlines_url = headline_base_url.format(id,api_key)
-  
+    full_headlines_url = headline_base_url.format(id, api_key)
+
     with urllib.request.urlopen(full_headlines_url) as url:
         articles = url.read()
         json_articles = json.loads(articles)
@@ -79,4 +79,3 @@ def process_articles(articles):
         articles_list.append(article_data)
 
     return articles_list
-

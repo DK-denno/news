@@ -1,8 +1,33 @@
 {% import 'macros.html' as macro %}
-    <body>
-        {% macro.displaySources(name) %}
 
-
-
-    </body> 
-{% endmacro %}
+<body>
+    sports
+    <ul>
+        {{macro.displaySources(sports)}}
+    </ul>
+    business
+    <ul>
+            {{macro.displaySources(business)}}
+    </ul>
+    technology
+    <ul>
+        {{macro.displaySources(technology)}}
+    </ul>
+    entertainment
+    <ul>
+            {{macro.displaySources(entertainment)}}
+        </ul>
+        science
+    <ul>
+            {{macro.displaySources(science)}}
+        </ul>
+        health
+    <ul>
+            {{macro.displaySources(health)}}
+        </ul>
+        general
+    <ul>
+            {{macro.displaySources(general)}}
+        </ul>
+     
+</body>
