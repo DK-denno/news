@@ -1,3 +1,10 @@
-.head{
-        margin-left:400px;   
+.card-body{
+        background-color:  bisque
+}
+.card-title{
+        background-color: darkorange
+}
+.row{
+        background-color:  aqua
+
 }
