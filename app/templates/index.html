@@ -1,76 +1,68 @@
 {% extends 'base.html' %} {% import 'macros.html' as macro %}
-
-<Style>
-    .head {
-        margin-left: 600px;
-    }
-    body{
-        background-color: bisque;
-    }
-    .card-body{
-      background-color: aqua
-
-    }
-    .row{
-      background-color: bisque
-
-    }
-    .card-title{
-      background-color: darkorange
-
-    }
-</Style>
-
-
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+</head>
+<style>
+        h1{
+            font-family: 'Nosifer', cursive;
+        }
+        
+        </style>
 
 <body>
+   
     {% block styles%} {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
-
-    <div class='container'>
-          <div class="card-body">
-        <h3 class="card-title">General News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(general)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Business News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(business)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Sports News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(sports)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Health News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(health)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Science News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(science)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Entertainment News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(entertainment)}}
-        </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Technology News Sources</h3>
-        <div class="row">
-          {{macro.displaySources(technology)}}
-        </div>
-      </div>
+       <div class = 'container'>
+           <h1>GENERAL NEWS SOURCES</h1>
+           <hr>
+             {{macro.displaySources(general)}}
+        <hr>
+        <hr>
+        <div class="jumbotron">
+        <h1>SPORTS NEWS SOURCES</h1>
     </div>
+        <hr>
+        {{macro.displaySources(sports)}}
+        
+        <hr>
+        <hr>
+        <hr>     
+        <div class="jumbotron">  
+        <h1>BUSINESS NEWS SOURCES</h1>
+    </div> 
+        <hr>
+        {{macro.displaySources(business)}}
+        <hr>
+        <hr>
+<div class="jumbotron">
+        <h1>ENTERTAINMENT NEWS SOURCES</h1>
+    </div>
+        <hr>
+        {{macro.displaySources(entertainment)}}
+        <hr>
+        <hr>
 
+        <h1>SCIENCE NEWS SOURCES</h1>
+        <hr>
+        {{macro.displaySources(science)}}
+        <hr>
+        <hr>
+
+        <h1>HEALTH NEWS SOURCES</h1>
+        <hr>
+        {{macro.displaySources(health)}}
+        <hr>
+        <hr>
+
+        <h1>TECHNOLOGY NEWS SOURCE</h1>
+        <hr>
+        {{macro.displaySources(technology)}}
+        <hr>
+        <hr>
+
+
+      
+      </div>    
     {% endblock %}
 </body>

@@ -1,14 +1,19 @@
 {% macro displaySources(sources) %}
     {% for source in sources %}
-        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 card">
-           
-            <li class="text-center">
-                    <a href = '/news/{{source.id}}'>{{source.name}}</a><br>
-            </li>
-        </div>
-    
- 
+       <div class = 'col-md-3 '>
+           <div class='card' >
+                <div class='card-header'style='background-color:blue;'>
+                     <h3>{{source.name}}</h3>
+                    </div>
+                <div class='card-body'>
+                <b>DESRIPTION:</b>{{source.desc}}<br>
+                <button class='btn btn-success' style='padding:10px;'><a href = '/news/{{source.id}}'>HEADLINES</a></button>
         
+            </div>
+            </div>
+          </div>
+        </div>
+               
 
     {% endfor %}
 {% endmacro %}

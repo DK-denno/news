@@ -54,10 +54,12 @@ def process_sources(sources):
     for one_source in sources:
         id = one_source.get('id')
         name = one_source.get('name')
+        desc = one_source.get('description')
         url = one_source.get('url')
         country = one_source.get('country')
+       
 
-        data_sources = Sources(id, name, url, country)
+        data_sources = Sources(id,name,desc,url,country)
         source_list.append(data_sources)
         # print('full_headlines_url')
 

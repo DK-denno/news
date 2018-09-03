@@ -8,9 +8,10 @@ class Headlines:
         self.publishedAt = publishedAt
 
 class Sources:
-    def __init__(self, id, name, url, country):
+    def __init__(self, id, name,desc, url, country):
 
         self.id = id
         self.name = name
+        self.desc = desc
         self.url = url
         self.country = country
