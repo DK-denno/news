@@ -1,11 +1,13 @@
 {% macro displaySources(sources) %}
     {% for source in sources %}
-    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 card">
+        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 card">
            
             <li class="text-center">
                     <a href = '/news/{{source.id}}'>{{source.name}}</a><br>
             </li>
         </div>
+    
+ 
         
 
     {% endfor %}
